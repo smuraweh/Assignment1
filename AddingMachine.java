@@ -42,13 +42,4 @@ public class AddingMachine {
         total = 0;
         memory = String.valueOf(total);
     }
-
-    public static void main (String args[]) {
-        AddingMachine myCalculator = new AddingMachine();
-
-        myCalculator.add(4);
-        myCalculator.subtract(2);
-        myCalculator.add(5);
-        myCalculator.toString();
-    }
 }
