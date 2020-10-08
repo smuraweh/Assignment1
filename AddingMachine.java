@@ -1,5 +1,7 @@
 package cse360assignment02;
 
+import java.lang.*;
+
 public class AddingMachine {
     private int total;
     private String memory;
@@ -10,7 +12,7 @@ public class AddingMachine {
     /* Constructor creates an object of AddingMachine(), initializing total to zero and memory to total.*/
     public AddingMachine() {
         total = 0;
-        memory = total.toString();
+        memory = String.valueOf(total);
     }
 
     /* getTotal() returns the value of the variable total.*/
@@ -21,13 +23,13 @@ public class AddingMachine {
     /* add() modifies the variable total by adding the value passed as the parameter.*/
     public void add(int value) {
         total += value;
-        memory = " + " + value.toString();
+        memory = " + " + String.valueOf(value);
     }
 
     /* subtract() modifies the variable total by subtracting the value passed as the parameter.*/
     public void subtract(int value) {
         total -= value;
-        memory = " - " + value.toString();
+        memory = " - " + String.valueOf(value);
     }
 
     /* toString() returns the String memory, which is modified as operations are done to the total.*/
@@ -38,6 +40,15 @@ public class AddingMachine {
     /* clear() resets the total to zero, and resets the memory variable to equal the new total.*/
     public void clear() {
         total = 0;
-        memory = total.toString();
+        memory = String.valueOf(total);
+    }
+
+    public static void main (String args[]) {
+        AddingMachine myCalculator = new AddingMachine();
+
+        myCalculator.add(4);
+        myCalculator.subtract(2);
+        myCalculator.add(5);
+        myCalculator.toString();
     }
 }
